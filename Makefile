@@ -13,11 +13,11 @@ all: $(NAME)
 $(NAME): $(objet)
 	@ar -rc $(NAME) $(objet)
 
-%.o : %.c libftprintf.h
+%.o : %.c ft_printf.h
 	@$(CC) $(CFLAGS) -c $<
 
 clean:
-	@rm -f $(objet) $(objet_bonus)
+	@rm -f $(objet)
 
 fclean: clean
 	@rm -f $(NAME)
